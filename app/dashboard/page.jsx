@@ -6,6 +6,8 @@ const Dashboard = () => {
         <p>Welcome to your dashboard</p>
         <p>This is a protected route</p>
 
+
+
     </div>
   )
 }
