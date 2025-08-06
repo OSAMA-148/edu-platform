@@ -45,12 +45,12 @@ function CourseFormDialog({ children }) {
     };
 
     const onGenerateCourse = async () => {
-        // const courseId = uuid4();
+        const courseId = uuid4();
         console.log(formData);
         setLoading(true);
         const result = await axios.post("/api/generete-course", {
             ...formData,
-            // courseId: courseId,
+            courseId: courseId,
         });
         console.log(result.data);
         setLoading(false);

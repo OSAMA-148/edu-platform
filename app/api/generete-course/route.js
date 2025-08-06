@@ -74,7 +74,7 @@ Respond using this JSON structure only:
         responseMimeType: "text/plain",
     };
 
-    const model = "gemini-2.5-flash-preview-05-20";
+    const model = "gemini-2.5-pro";
     const contents = [
         {
             role: "user",
@@ -94,7 +94,7 @@ Respond using this JSON structure only:
 
     console.log(response.candidates[0].content.parts[0].text);
     const rowRES = response?.candidates[0]?.content?.parts[0]?.text;
-    const rowJSON = rowRES.replace("```json", "").replace("```", "");
+    const rowJSON = rowRES.replace('```json', '').replace('```', '');
     const ResJson = JSON.parse(rowJSON);
 
     const imageBanner = ResJson.course?.imagePrompt;
