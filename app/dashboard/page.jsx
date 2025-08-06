@@ -1,9 +1,15 @@
+import React from "react";
+import Banner from "./_components/Banner";
 
-function Dashboard() {
-  return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-4xl font-bold">Dashboard</h1>
-    </div>
-  );
+
+function dashboard() {
+    return (
+        <div className="p-4">
+            <Banner />
+            {/* <EnrolledCourse />
+            <CourseList /> */}
+        </div>
+    );
 }
-export default Dashboard;
+
+export default dashboard;
