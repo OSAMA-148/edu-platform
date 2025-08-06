@@ -46,16 +46,15 @@ function CourseFormDialog({ children }) {
 
     const onGenerateCourse = async () => {
         // const courseId = uuid4();
-        // console.log(formData);
-        // setLoading(true);
-        // const result = await axios.post("/api/generete-course", {
-        //     ...formData,
-        //     courseId: courseId,
-        // });
-        // console.log(result.data);
-        // setLoading(false);
-        // router.push("/dashboard/edit-course/" + courseId);
         console.log(formData);
+        setLoading(true);
+        const result = await axios.post("/api/generete-course", {
+            ...formData,
+            // courseId: courseId,
+        });
+        console.log(result.data);
+        setLoading(false);
+        // router.push("/dashboard/edit-course/" + courseId);
     };
     return (
         <div>

@@ -19,7 +19,6 @@ function Provider({ children }) {
             email: user?.primaryEmailAddress?.emailAddress,
         });
 
-        console.log(result.data);
     };
     return (
         <UserDetailConext.Provider value={{ userDetail, setUserDetail }}>
