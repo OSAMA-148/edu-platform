@@ -81,7 +81,7 @@ function AppSidebar() {
                         <SidebarGroupContent>
                             <SidebarMenu>
                                 {menu.map((item) => (
-                                    <SidebarMenuItem>
+                                    <SidebarMenuItem key={item.path}>
                                         <SidebarMenuButton>
                                             <Link
                                                 className={`flex gap-3  w-full p-3 rounded-2xl  ${
