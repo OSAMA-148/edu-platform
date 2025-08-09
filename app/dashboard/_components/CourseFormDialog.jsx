@@ -54,7 +54,7 @@ function CourseFormDialog({ children }) {
         });
         console.log(result.data);
         setLoading(false);
-        // router.push("/dashboard/edit-course/" + courseId);
+        router.push("/dashboard/edit-course/" + courseId);
     };
     return (
         <div>
