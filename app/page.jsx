@@ -40,9 +40,11 @@ export default function Home() {
                     personalized courses just for you — fast, effective, and
                     smart.
                 </p>
-                <Button className="bg-white text-blue-600 font-semibold px-6 py-2 rounded hover:bg-blue-100 transition">
+                <Link href="/dashboard">
+                <Button className="bg-white cursor-pointer text-blue-600 font-semibold px-6 py-2 rounded hover:bg-blue-100 transition">
                     Get Started
-                </Button>
+                    </Button>
+                </Link>
             </section>
 
             {/* Features / Cards */}

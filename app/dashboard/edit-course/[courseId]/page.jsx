@@ -2,8 +2,9 @@
 import axios from "axios";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import CourseInfo from "../_component/CourseInfo";
-import ChapterList from "../_component/ChapterList";
+import CourseInfo from "../_components/CourseInfo";
+import ChapterList from "../_components/ChapterList";
+
 function EditCourse({ viewCourse = false }) {
     const params = useParams();
     const courseId = params?.courseId;

@@ -69,7 +69,7 @@ function CourseInfo({ course, viewCourse }) {
                     src={course?.imageURL}
                     width={400}
                     height={400}
-                    alt={course?.imageURL}
+                    alt="course image"
                     className="w-full  h-[350px] object-cover rounded-3xl sm:m-5"
                 />
             </div>
