@@ -23,3 +23,11 @@ export const coursesTable = pgTable("courses", {
     imageURL: varchar().default(""),
     email: varchar("email").references(() => usersTable.email),
 });
+
+// Define the enrollToCourse table schema
+export const enrollToCourseTable = pgTable("enrolToCourse", {
+    id: integer().primaryKey().generatedAlwaysAsIdentity(),
+    cid: varchar("cid").references(() => coursesTable.cid),
+    email: varchar("email").references(() => usersTable.email),
+    coursesDone: json(),
+});
