@@ -3,12 +3,12 @@ import React, { useEffect, useState } from "react";
 import { useUser } from "@clerk/nextjs";
 import axios from "axios";
 import { UserDetailConext } from "@/context/UserContext";
-// import { SelectedChaptersConext } from "@/context/SelectedChapter";
+import { SelectedChaptersConext } from "@/context/SelectedChapter";
 function Provider({ children }) {
     const { user } = useUser();
 
     const [userDetail, setUserDetail] = useState();
-    // const [selectedChapters, setSelectedChapters] = useState(0);
+    const [selectedChapters, setSelectedChapters] = useState(0);
     useEffect(() => {
         user && createNewUser();
     }, [user]);
@@ -19,11 +19,15 @@ function Provider({ children }) {
             email: user?.primaryEmailAddress?.emailAddress,
         });
 
+        console.log(result.data);
     };
     return (
         <UserDetailConext.Provider value={{ userDetail, setUserDetail }}>
-            
+            <SelectedChaptersConext.Provider
+                value={{ selectedChapters, setSelectedChapters }}
+            >
                 <div>{children}</div>
+            </SelectedChaptersConext.Provider>
         </UserDetailConext.Provider>
     );
 }
