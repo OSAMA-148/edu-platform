@@ -45,13 +45,6 @@ function CourseCard({ course }) {
                         <Book /> {course?.courseJson?.course?.chapters} Chapters
                     </h2>
                     {course?.courseContent?.length ? (
-                        <Link href={"/dashboard/edit-course/" + course?.cid}>
-                            <Button className="cursor-pointer">
-                                {" "}
-                                <Settings /> start learning
-                            </Button>
-                        </Link>
-                    ) : (
                         <Button
                             disabled={loading}
                             onClick={onEnrollCourse}
@@ -64,6 +57,13 @@ function CourseCard({ course }) {
                             )}{" "}
                             Enroll Course
                         </Button>
+                    ) : (
+                        <Link href={"/dashboard/edit-course/" + course?.cid}>
+                            <Button className="cursor-pointer">
+                                {" "}
+                                <Settings /> start learning
+                            </Button>
+                        </Link>
                     )}
                 </div>
             </div>

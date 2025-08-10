@@ -6,6 +6,9 @@ import ChapterListSideBar from "../_components/ChapterListSideBar";
 import ChapterContent from "../_components/ChapterContent";
 import { useParams } from "next/navigation";
 import axios from "axios";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowLeftToLine } from "lucide-react";
 function Course() {
     const { courseId } = useParams();
     const [courseInfo, setCourseInfo] = useState();
@@ -22,8 +25,17 @@ function Course() {
         setCourseInfo(result.data);
     };
     return (
-        <div>
+        <div className="relative">
             <Header hideSideBar={true} />
+
+            <div className="absolute top-4 right-4">
+                <Link href={"/dashboard"}>
+                    <Button className="cursor-pointer">
+                        <ArrowLeftToLine /> Go Back
+                    </Button>
+                </Link>
+            </div>
+
             <div className="flex gap-15">
                 <ChapterListSideBar courseInfo={courseInfo} />
                 <ChapterContent courseInfo={courseInfo} />
