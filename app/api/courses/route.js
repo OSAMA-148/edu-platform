@@ -17,7 +17,6 @@ export async function GET(req) {
             .from(coursesTable)
             .where(eq(coursesTable.cid, courseId));
 
-        console.log(result);
 
         return NextResponse.json(result[0]);
     } else {
@@ -28,7 +27,6 @@ export async function GET(req) {
                 eq(coursesTable.email, user?.primaryEmailAddress?.emailAddress)
             );
 
-        console.log(result);
 
         return NextResponse.json(result);
     }

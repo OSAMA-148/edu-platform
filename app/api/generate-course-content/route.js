@@ -102,10 +102,7 @@ Generate content for these topics: ${JSON.stringify(chapter.topics)}
         }
 
         const youtubeData = await getYoutubeVideo(chapter?.chapterName);
-        console.log({
-            youtubeVideo: youtubeData,
-            courseData: ResJson,
-        });
+        
         return {
             youtubeVideo: youtubeData,
             courseData: ResJson,

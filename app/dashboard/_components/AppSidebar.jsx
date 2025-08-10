@@ -15,8 +15,6 @@ import { Button } from "@/components/ui/button";
 import {
     Book,
     UserCircle2Icon,
-    WalletCards,
-    Compass,
     LayoutDashboard,
 } from "lucide-react";
 import Link from "next/link";
@@ -36,18 +34,6 @@ function AppSidebar() {
             title: "My Courses",
             icon: Book,
             path: "/dashboard/my-courses",
-        },
-
-        {
-            title: "Explore Courses",
-            icon: Compass,
-            path: "/dashboard/explore",
-        },
-
-        {
-            title: "Billing",
-            icon: WalletCards,
-            path: "/dashboard/billing",
         },
 
         {

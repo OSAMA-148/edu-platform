@@ -19,7 +19,6 @@ function Course() {
         const result = await axios.get(
             "/api/enroll-course?courseId=" + courseId
         );
-        console.log(result.data);
         setCourseInfo(result.data);
     };
     return (

@@ -92,7 +92,6 @@ Respond using this JSON structure only:
         contents,
     });
 
-    console.log(response.candidates[0].content.parts[0].text);
     const rowRES = response?.candidates[0]?.content?.parts[0]?.text;
     const rowJSON = rowRES.replace('```json', '').replace('```', '');
     const ResJson = JSON.parse(rowJSON);
@@ -129,6 +128,5 @@ const generateImage = async (imagePrompt) => {
             },
         }
     );
-    console.log(result.data.image); //Output Result: Base 64 Image
     return result.data.image;
 };

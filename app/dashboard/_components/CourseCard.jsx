@@ -14,7 +14,6 @@ function CourseCard({ course }) {
             const result = await axios.post("/api/enroll-course", {
                 courseId: course?.cid,
             });
-            console.log(result.data);
             toast.success("enrolled successfully");
             setLoading(false);
         } catch (e) {
